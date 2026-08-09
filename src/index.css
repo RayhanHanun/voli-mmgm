@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@config "../tailwind.config.js";
+
+@theme {
+  --color-glow-dark: #4A154B;
+  --color-glow-primary: #702963;
+  --color-glow-light: #9B59B6;
+  --color-glow-subtext: #64748B;
+  --color-glow-glass: rgba(255, 255, 255, 0.85);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
