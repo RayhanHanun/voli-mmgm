@@ -10,13 +10,17 @@ export const TEAMS = [
 
 export type TeamName = (typeof TEAMS)[number];
 
+export type MatchStatus = 'UPCOMING' | 'COMPLETED';
+
 export interface Match {
   id: string;
   date: string;
   home_team: TeamName;
   away_team: TeamName;
-  home_score: number;
-  away_score: number;
+  home_score: number | null;
+  away_score: number | null;
+  match_time: string;
+  status: MatchStatus;
   created_at: string;
 }
 
@@ -24,8 +28,10 @@ export interface MatchInsert {
   date: string;
   home_team: TeamName;
   away_team: TeamName;
-  home_score: number;
-  away_score: number;
+  home_score: number | null;
+  away_score: number | null;
+  match_time: string;
+  status: MatchStatus;
 }
 
 export interface Standing {
