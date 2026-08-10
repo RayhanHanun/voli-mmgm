@@ -80,10 +80,12 @@ export default function StandingsTable({ standings }: Props) {
       <div className="px-5 py-4 border-t border-purple-100 bg-purple-50/30">
         <div className="flex items-start gap-2">
           <Info className="w-4 h-4 text-glow-primary mt-0.5 shrink-0" />
-          <div className="text-xs text-glow-subtext space-y-1">
-            <p className="m-0 font-semibold text-glow-dark">Sistem Poin:</p>
-            <p className="m-0">Menang <span className="font-bold text-glow-dark">2–0</span> → Pemenang dapat <span className="font-bold text-green-600">3 poin</span>, yang kalah <span className="font-bold text-red-500">0 poin</span></p>
-            <p className="m-0">Menang <span className="font-bold text-glow-dark">2–1</span> → Pemenang dapat <span className="font-bold text-green-600">2 poin</span>, yang kalah <span className="font-bold text-amber-600">1 poin</span></p>
+          <div className="text-xs text-glow-subtext">
+            <p className="m-0 mb-1 font-semibold text-glow-dark">Sistem Poin:</p>
+            <ul className="m-0 pl-4 space-y-1 list-disc">
+              <li>Menang <span className="font-bold text-glow-dark">2–0</span> → Pemenang dapat <span className="font-bold text-green-600">3 poin</span>, yang kalah <span className="font-bold text-red-500">0 poin</span></li>
+              <li>Menang <span className="font-bold text-glow-dark">2–1</span> → Pemenang dapat <span className="font-bold text-green-600">2 poin</span>, yang kalah <span className="font-bold text-amber-600">1 poin</span></li>
+            </ul>
           </div>
         </div>
       </div>
