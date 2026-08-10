@@ -88,8 +88,13 @@ export default function ScheduleView() {
                   key={m.id}
                   className="px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 hover:bg-purple-50/30 transition-colors"
                 >
-                  <div className="flex items-center justify-between sm:justify-start sm:flex-col sm:items-start text-xs text-glow-subtext sm:min-w-[170px] shrink-0">
-                    <div className="font-medium sm:font-normal">{formatTanggalIndo(m.date)}</div>
+                  <div className="flex items-center gap-1.5 text-xs text-glow-subtext sm:min-w-[170px] shrink-0 flex-wrap mb-1 sm:mb-0">
+                    <span className="font-medium sm:font-normal">{formatTanggalIndo(m.date)}</span>
+                    <span className="text-purple-300 hidden sm:inline">•</span>
+                    <span className="flex items-center gap-1 bg-purple-50 sm:bg-transparent px-2 py-0.5 sm:p-0 rounded-md sm:rounded-none">
+                      <Clock className="w-3 h-3" />
+                      {m.match_time}
+                    </span>
                   </div>
 
                   <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base py-2 sm:py-0">

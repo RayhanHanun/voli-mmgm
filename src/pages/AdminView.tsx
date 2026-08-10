@@ -514,7 +514,7 @@ export default function AdminView() {
       ) : (
         <>
           <StandingsTable standings={standings} />
-          <MatchHistory matches={completedMatches} isAdmin onDelete={(id) => setDeletingMatchId(id)} />
+          <MatchHistory matches={completedMatches} isAdmin onDelete={(id) => setDeletingMatchId(id)} onEditScore={(m) => setEditingScoreMatch(m)} />
         </>
       )}
 

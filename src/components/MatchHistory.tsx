@@ -1,4 +1,4 @@
-import { Calendar, Trash2 } from 'lucide-react';
+import { Calendar, Trash2, Edit3, Clock } from 'lucide-react';
 import type { Match } from '../types';
 import { formatTanggalIndo } from '../utils/dateFormatter';
 
@@ -6,9 +6,10 @@ interface Props {
   matches: Match[];
   isAdmin?: boolean;
   onDelete?: (id: string) => void;
+  onEditScore?: (match: Match) => void;
 }
 
-export default function MatchHistory({ matches, isAdmin, onDelete }: Props) {
+export default function MatchHistory({ matches, isAdmin, onDelete, onEditScore }: Props) {
   return (
     <div className="bg-white/70 backdrop-blur-md border border-purple-100 shadow-lg rounded-2xl overflow-hidden">
       <div className="px-6 py-4 border-b border-purple-100 flex items-center gap-3">
@@ -29,8 +30,13 @@ export default function MatchHistory({ matches, isAdmin, onDelete }: Props) {
                 key={m.id}
                 className="px-4 sm:px-6 py-4 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 hover:bg-purple-50/30 transition-colors"
               >
-                <div className="flex items-center justify-between sm:justify-start sm:flex-col sm:items-start text-xs text-glow-subtext sm:min-w-[170px] shrink-0">
-                  <div className="font-medium sm:font-normal">{formatTanggalIndo(m.date)}</div>
+                <div className="flex items-center gap-1.5 text-xs text-glow-subtext sm:min-w-[170px] shrink-0 flex-wrap mb-1 sm:mb-0">
+                  <span className="font-medium sm:font-normal">{formatTanggalIndo(m.date)}</span>
+                  <span className="text-purple-300 hidden sm:inline">•</span>
+                  <span className="flex items-center gap-1 bg-purple-50 sm:bg-transparent px-2 py-0.5 sm:p-0 rounded-md sm:rounded-none">
+                    <Clock className="w-3 h-3" />
+                    {m.match_time}
+                  </span>
                 </div>
 
                 <div className="flex-1 flex items-center justify-center gap-2 sm:gap-3 text-sm sm:text-base py-2 sm:py-0">
@@ -55,15 +61,26 @@ export default function MatchHistory({ matches, isAdmin, onDelete }: Props) {
                   </span>
                 </div>
 
-                {isAdmin && onDelete && (
-                  <div className="flex items-center justify-end shrink-0 pt-2 sm:pt-0 border-t border-purple-50 sm:border-0 mt-2 sm:mt-0">
-                    <button
-                      onClick={() => onDelete(m.id)}
-                      className="p-2 rounded-lg text-red-400 hover:bg-red-50 hover:text-red-600 transition-colors cursor-pointer w-full sm:w-auto flex justify-center border border-red-100 sm:border-transparent"
-                      title="Hapus pertandingan"
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
+                {isAdmin && (
+                  <div className="flex items-center justify-end gap-2 shrink-0 pt-2 sm:pt-0 border-t border-purple-50 sm:border-0 mt-2 sm:mt-0">
+                    {onEditScore && (
+                      <button
+                        onClick={() => onEditScore(m)}
+                        className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 px-3 py-2 sm:py-1.5 rounded-lg bg-glow-primary/10 text-glow-primary text-xs font-bold hover:bg-glow-primary hover:text-white transition-colors cursor-pointer"
+                        title="Edit Skor"
+                      >
+                        <Edit3 className="w-3.5 h-3.5" /> Skor
+                      </button>
+                    )}
+                    {onDelete && (
+                      <button
+                        onClick={() => onDelete(m.id)}
+                        className="p-2 rounded-lg text-red-400 hover:bg-red-50 hover:text-red-600 transition-colors cursor-pointer flex justify-center border border-red-100 sm:border-transparent"
+                        title="Hapus pertandingan"
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    )}
                   </div>
                 )}
               </div>
