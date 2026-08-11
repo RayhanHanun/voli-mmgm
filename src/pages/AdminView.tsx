@@ -113,7 +113,7 @@ function EditScheduleModal({
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-glow-dark mb-1">Tanggal</label>
             <input
@@ -134,7 +134,7 @@ function EditScheduleModal({
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium text-glow-dark mb-1">Tim Home</label>
             <select
