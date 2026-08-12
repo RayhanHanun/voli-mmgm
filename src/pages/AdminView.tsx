@@ -132,9 +132,6 @@ function EditScheduleModal({
               className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             />
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 gap-2 sm:gap-4">
           <div className="min-w-0">
             <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
             <select
@@ -398,9 +395,6 @@ export default function AdminView() {
                 className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               />
             </div>
-          </div>
-
-          <div className="grid grid-cols-2 gap-2 sm:gap-4">
             <div className="min-w-0">
               <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
               <select
