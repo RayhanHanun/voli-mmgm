@@ -120,7 +120,7 @@ function EditScheduleModal({
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+              className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             />
           </div>
           <div className="min-w-0">
@@ -129,7 +129,7 @@ function EditScheduleModal({
               type="time"
               value={matchTime}
               onChange={(e) => setMatchTime(e.target.value)}
-              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+              className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             />
           </div>
           <div className="min-w-0">
@@ -137,7 +137,7 @@ function EditScheduleModal({
             <select
               value={homeTeam}
               onChange={(e) => setHomeTeam(e.target.value as TeamName)}
-              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+              className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             >
               {TEAMS.map((t) => (
                 <option key={t} value={t}>
@@ -151,7 +151,7 @@ function EditScheduleModal({
             <select
               value={awayTeam}
               onChange={(e) => setAwayTeam(e.target.value as TeamName)}
-              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+              className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             >
               {TEAMS.map((t) => (
                 <option key={t} value={t}>
@@ -382,7 +382,7 @@ export default function AdminView() {
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 required
-                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+                className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               />
             </div>
             <div className="min-w-0">
@@ -392,7 +392,7 @@ export default function AdminView() {
                 value={matchTime}
                 onChange={(e) => setMatchTime(e.target.value)}
                 required
-                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+                className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               />
             </div>
             <div className="min-w-0">
@@ -400,7 +400,7 @@ export default function AdminView() {
               <select
                 value={homeTeam}
                 onChange={(e) => setHomeTeam(e.target.value as TeamName)}
-                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+                className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               >
                 {TEAMS.map((t) => (
                   <option key={t} value={t}>
@@ -414,7 +414,7 @@ export default function AdminView() {
               <select
                 value={awayTeam}
                 onChange={(e) => setAwayTeam(e.target.value as TeamName)}
-                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
+                className="appearance-none m-0 w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               >
                 {TEAMS.map((t) => (
                   <option key={t} value={t}>
