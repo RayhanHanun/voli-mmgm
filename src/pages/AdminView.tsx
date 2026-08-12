@@ -113,34 +113,34 @@ function EditScheduleModal({
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-4">
-          <div>
-            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tanggal</label>
+        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+          <div className="min-w-0">
+            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tanggal</label>
             <input
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
-              className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0"
             />
           </div>
-          <div>
-            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Jam</label>
+          <div className="min-w-0">
+            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Jam</label>
             <input
               type="time"
               value={matchTime}
               onChange={(e) => setMatchTime(e.target.value)}
-              className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0"
             />
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-4">
-          <div>
-            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tim Home</label>
+        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+          <div className="min-w-0">
+            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
             <select
               value={homeTeam}
               onChange={(e) => setHomeTeam(e.target.value as TeamName)}
-              className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark truncate"
+              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             >
               {TEAMS.map((t) => (
                 <option key={t} value={t}>
@@ -149,12 +149,12 @@ function EditScheduleModal({
               ))}
             </select>
           </div>
-          <div>
-            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tim Away</label>
+          <div className="min-w-0">
+            <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Away</label>
             <select
               value={awayTeam}
               onChange={(e) => setAwayTeam(e.target.value as TeamName)}
-              className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark truncate"
+              className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
             >
               {TEAMS.map((t) => (
                 <option key={t} value={t}>
@@ -377,36 +377,36 @@ export default function AdminView() {
         </div>
 
         <form className="p-4 sm:p-6 space-y-2 sm:space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-4">
-            <div>
-              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tanggal</label>
+          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="min-w-0">
+              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tanggal</label>
               <input
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
                 required
-                className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0"
               />
             </div>
-            <div>
-              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Jam</label>
+            <div className="min-w-0">
+              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Jam</label>
               <input
                 type="time"
                 value={matchTime}
                 onChange={(e) => setMatchTime(e.target.value)}
                 required
-                className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 sm:gap-4">
-            <div>
-              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tim Home</label>
+          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+            <div className="min-w-0">
+              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
               <select
                 value={homeTeam}
                 onChange={(e) => setHomeTeam(e.target.value as TeamName)}
-                className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               >
                 {TEAMS.map((t) => (
                   <option key={t} value={t}>
@@ -415,12 +415,12 @@ export default function AdminView() {
                 ))}
               </select>
             </div>
-            <div>
-              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-0.5 sm:mb-1">Tim Away</label>
+            <div className="min-w-0">
+              <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Away</label>
               <select
                 value={awayTeam}
                 onChange={(e) => setAwayTeam(e.target.value as TeamName)}
-                className="w-full px-2 py-1 sm:px-3 sm:py-2 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark"
+                className="w-full h-[42px] px-2 sm:px-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-xs sm:text-sm text-glow-dark min-w-0 truncate"
               >
                 {TEAMS.map((t) => (
                   <option key={t} value={t}>
