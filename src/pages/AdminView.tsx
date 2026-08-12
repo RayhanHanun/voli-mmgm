@@ -113,7 +113,7 @@ function EditScheduleModal({
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
             <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tanggal</label>
             <input
@@ -134,7 +134,7 @@ function EditScheduleModal({
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
             <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
             <select
@@ -377,7 +377,7 @@ export default function AdminView() {
         </div>
 
         <form className="p-6 space-y-4">
-          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
               <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tanggal</label>
               <input
@@ -400,7 +400,7 @@ export default function AdminView() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-2 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
               <label className="block text-xs sm:text-sm font-medium text-glow-dark mb-1">Tim Home</label>
               <select
