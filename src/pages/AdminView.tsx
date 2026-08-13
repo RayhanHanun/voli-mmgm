@@ -325,7 +325,7 @@ export default function AdminView() {
               placeholder="Masukkan PIN"
               value={pin}
               onChange={(e) => setPin(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-center text-lg tracking-widest text-glow-dark"
+              className="w-full px-4 py-3 rounded-xl border border-purple-200 bg-white/80 focus:outline-none focus:ring-2 focus:ring-glow-light text-center text-lg tracking-widest text-glow-dark placeholder:text-slate-500"
               autoFocus
             />
             {pinError && (

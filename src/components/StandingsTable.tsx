@@ -49,7 +49,7 @@ export default function StandingsTable({ standings }: Props) {
                       3
                     </span>
                   ) : (
-                    <span className="inline-flex items-center justify-center w-7 h-7 text-glow-subtext font-medium text-xs">
+                    <span className="inline-flex items-center justify-center w-7 h-7 text-glow-dark font-medium text-xs">
                       {i + 1}
                     </span>
                   )}

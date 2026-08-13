@@ -16,7 +16,7 @@ export default function Layout() {
       <nav className="hidden sm:block sticky top-0 z-40 bg-white/70 backdrop-blur-md border-b border-purple-100 shadow-sm">
         <div className="max-w-4xl mx-auto px-4 flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3 no-underline">
-            <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-contain" />
+            <img src="/logo.png" alt="Logo" loading="eager" fetchPriority="high" className="w-10 h-10 rounded-lg object-contain" />
             <div className="text-left">
               <span className="text-base font-bold text-glow-dark leading-tight block">Klasemen Liga Voli</span>
               <span className="text-xs text-glow-subtext">MUDA-MUDI GANGSAL MUDA</span>
@@ -48,7 +48,7 @@ export default function Layout() {
       {/* Mobile header — visible only on mobile */}
       <div className="sm:hidden px-4 pt-4 pb-2">
         <div className="bg-white/70 backdrop-blur-md border border-purple-100 shadow-lg rounded-2xl px-4 py-3 flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10 rounded-lg object-contain" />
+          <img src="/logo.png" alt="Logo" loading="eager" fetchPriority="high" className="w-10 h-10 rounded-lg object-contain" />
           <div className="text-left">
             <span className="text-sm font-bold text-glow-dark leading-tight block">Klasemen Liga Voli</span>
             <span className="text-xs text-glow-subtext">MUDA-MUDI GANGSAL MUDA</span>
