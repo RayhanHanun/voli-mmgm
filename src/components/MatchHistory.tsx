@@ -33,7 +33,7 @@ export default function MatchHistory({ matches, isAdmin, onDelete, onEditScore }
                 <div className="flex items-center gap-1.5 text-xs text-glow-subtext sm:min-w-[170px] shrink-0 flex-wrap mb-1 sm:mb-0">
                   <span className="font-medium sm:font-normal">{formatTanggalIndo(m.date)}</span>
                   <span className="text-purple-300 hidden sm:inline">•</span>
-                  <span className="flex items-center gap-1 bg-purple-50 sm:bg-transparent px-2 py-0.5 sm:p-0 rounded-md sm:rounded-none">
+                  <span className="flex items-center gap-1 bg-purple-50 sm:bg-transparent px-2 py-0.5 sm:p-0 rounded-md sm:rounded-none text-glow-dark sm:text-glow-subtext">
                     <Clock className="w-3 h-3" />
                     {m.match_time}
                   </span>
