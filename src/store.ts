@@ -104,7 +104,8 @@ export const useStore = create<StoreState>()(
     const { data, error } = await supabase
       .from('matches')
       .select('*')
-      .order('created_at', { ascending: true });
+      .order('date', { ascending: true })
+      .order('match_time', { ascending: true });
 
     if (error) {
       set({ loading: false, error: error.message });
