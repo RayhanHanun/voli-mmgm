@@ -67,10 +67,15 @@ export default function RewardCategories() {
             key={label}
             tabIndex={0}
             onClick={(e) => {
-              // Jika ditekan ulang saat sedang aktif (focus), matikan efeknya
-              if (document.activeElement === e.currentTarget) {
+              const focusedAt = Number(e.currentTarget.dataset.focusedAt || 0);
+              // Jika jarak antara focus dan click lebih dari 200ms, berarti ini tap kedua.
+              if (Date.now() - focusedAt > 200) {
                 e.currentTarget.blur();
+                e.currentTarget.dataset.focusedAt = "0";
               }
+            }}
+            onFocus={(e) => {
+              e.currentTarget.dataset.focusedAt = Date.now().toString();
             }}
             className={`group relative overflow-hidden ${cardBg} backdrop-blur-xl border-2 ${borderColor} rounded-2xl px-3 py-5 sm:px-4 sm:py-7 flex flex-col items-center text-center transition-all duration-150 hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05] outline-none touch-manipulation ${glowColor} cursor-pointer`}
             style={{ animation: `fadeSlideUp 0.5s ease-out ${i * 120}ms both` }}
