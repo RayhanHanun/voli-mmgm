@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useStore } from '../store';
 import StandingsTable from '../components/StandingsTable';
 import MatchHistory from '../components/MatchHistory';
+import RewardCategories from '../components/RewardCategories';
 
 export default function PublicView() {
   const { standings, matches, loading, error, fetchMatches } = useStore();
@@ -30,6 +31,7 @@ export default function PublicView() {
 
   return (
     <div className="space-y-8 w-full">
+      <RewardCategories />
       <StandingsTable standings={standings} />
       <MatchHistory matches={completedMatches} />
     </div>

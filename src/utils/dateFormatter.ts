@@ -10,7 +10,7 @@ export function formatTanggalIndo(dateString: string): string {
       month: 'long',
       year: 'numeric',
     }).format(date);
-  } catch (error) {
+  } catch {
     return dateString;
   }
 }
