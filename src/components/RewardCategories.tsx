@@ -66,11 +66,17 @@ export default function RewardCategories() {
           <div
             key={label}
             tabIndex={0}
-            className={`group relative overflow-hidden ${cardBg} backdrop-blur-xl border-2 ${borderColor} rounded-2xl px-3 py-5 sm:px-4 sm:py-7 flex flex-col items-center text-center transition-all duration-300 hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05] outline-none ${glowColor} cursor-pointer`}
+            onClick={(e) => {
+              // Jika ditekan ulang saat sedang aktif (focus), matikan efeknya
+              if (document.activeElement === e.currentTarget) {
+                e.currentTarget.blur();
+              }
+            }}
+            className={`group relative overflow-hidden ${cardBg} backdrop-blur-xl border-2 ${borderColor} rounded-2xl px-3 py-5 sm:px-4 sm:py-7 flex flex-col items-center text-center transition-all duration-150 hover:scale-[1.05] active:scale-[1.05] focus:scale-[1.05] outline-none touch-manipulation ${glowColor} cursor-pointer`}
             style={{ animation: `fadeSlideUp 0.5s ease-out ${i * 120}ms both` }}
           >
             {/* Animated shimmer overlay */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-300 bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.5)_50%,transparent_80%)] bg-[length:250%_100%] group-hover:animate-[shimmer_2s_ease-in-out] group-active:animate-[shimmer_2s_ease-in-out] group-focus:animate-[shimmer_2s_ease-in-out]" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus:opacity-100 transition-opacity duration-150 bg-[linear-gradient(110deg,transparent_20%,rgba(255,255,255,0.5)_50%,transparent_80%)] bg-[length:250%_100%] group-hover:animate-[shimmer_2s_ease-in-out] group-active:animate-[shimmer_2s_ease-in-out] group-focus:animate-[shimmer_2s_ease-in-out]" />
 
             {/* Pulsing ring behind icon */}
             <div className="relative mb-4">
