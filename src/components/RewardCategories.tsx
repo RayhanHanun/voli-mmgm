@@ -1,4 +1,4 @@
-import { Trophy, Medal } from 'lucide-react';
+import { Trophy, Handshake, Medal } from 'lucide-react';
 import { useState } from 'react';
 
 const REWARDS = [
@@ -42,7 +42,7 @@ const REWARDS = [
     titleColor: 'text-amber-900',
   },
   {
-    icon: Medal,
+    icon: Handshake,
     label: 'TIM SPORTIF',
     title: 'FAIR PLAY AWARD',
     iconBg: 'bg-gradient-to-br from-emerald-300 via-green-400 to-teal-600',
